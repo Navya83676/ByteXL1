@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2874f0;
+        }
+
+       .header {
+    background-color: #131921;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.logo {
+    background-image: url("https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png");
+background-size: contain; 
+background-repeat: no-repeat;
+width: 150px; 
+height: 50px; 
+margin-top: 10px;
+}
+.search-bar {
+    display: flex;
+    width: 95%;
+    max-width: 800px;
+}
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.search-bar button {
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.navbar {
+     background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+.main-banner{
+    background: url('https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Amzon-1.png?fit=1200%2C700&ssl=1');
+    background-size: cover;
+    height: 800px;
+    width: 1510px;
+    margin-top: 10px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.products-container {
+     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+ }
+.product-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    color: #388e3c;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+     margin-top: 20px;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer-links {
+    width: 30%;
+    text-align: left;
+    padding: 0 20px;
+}
+.footer-links h3 {
+    margin-top: 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #131921;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.ttf" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <div class="header-container">
+            <div class="logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more" id="searchInput">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="header-right">
+                <a href="#"><i class="fa-solid fa-user"></i>  Login</a>
+                <a href="#">Orders</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i>  Cart</a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Today's Deal</a></li>
+            <li><a href="#">Amazon miniTV</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">Appliances</a></li>
+            <li><a href="#">Grocery</a></li>
+            <li><a href="#">Home&Furniture</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Fashion</a></li>
+        </ul>
+    </nav>
+    <div class="main-banner"></div>
+    <main class="main-content">
+        <div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71XP2ScwtFL._SL1500_.jpg" alt="Product 1">
+                <h3>boAt Nirvana 751 ANC Hybrid Active Noise Cancelling Bluetooth Wireless Over Ear Headphones</h3>
+                <p class="price">₹3,499</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://mysleepyhead.com/media/catalog/product/s/e/sectional_sofa_in_india_4_3.jpg" alt="Product 2">
+                <h3>SofaSets</h3>
+                <p class="price">₹3,00,000</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61nxQ62qglL._SL1500_.jpg" alt="Product 3">
+                <h3>Oneplus Nord CE4 (Celadon Marble, 8GB RAM, 256GB Storage) </h3>
+                <p class="price">₹26,998</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQuWQC3fXbvnroGAE1xzgL-ll4SHedx2yXwz9kC9fvPxT2QO8FwLH1nkspWLHfLy_-EzeklOQQ5OH5Ffyruxp6wOed_gcCVyHGA_v2JjlMam1RwU-91QjWagQ&usqp=CAE" alt="Product 4">
+                <h3>ASIAN Men Colourblocked Trekking Shoes (9)</h3>
+                <p class="price">₹749</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSyUj7v9DHw-djrNZGZdYWf2-w8yfQgKihC1Vp58uKLXUK7dNAlFdPcXg-u9tk9zw3vaJ7mt-eVITThiid7HZQ5ojDU6-BRWF2MTDFT795z&usqp=CAE" alt="Product5">
+                <h3>Tokyo Talkies Women Rust Brown Solid A-Line Top (M)</h3>
+                <p class="price">₹360</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71wFyZlg58L._AC_UF894,1000_QL80_.jpg" alt="Product 6">
+                <h3>Steel Water Bottles</h3>
+                <p class="price">₹2,000</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ4PZpF62HQ3zPvu1NubHYebJIZ0oYFSm3IbuWfOSzeihztoEoY-dbeM6HjBL7Zg5Tedhyif4e36KhQZ3LkEDoC4nQSak0HOOg_A6Va3jGS1w81Wlaoo9EO&usqp=CAE" alt="Product 7">
+                <h3>Noise Buds Xero Truly Wireless Earbuds </h3>
+                <p class="price">₹3,990</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTP3wiNuKjcrk9yZ3TYe-82_zwFYnNF1c75c2y9Iay20ryVOyvxLTMMaoNlG-U6dD_cMGApkQ2piYSho1xrXaqQeu3ewsNbTRQRvQILXUBDqvJqWVWC6ekteA&usqp=CAE" alt="Product 8">
+                <h3> EXOTIC Studded hand bag for women</h3>
+                <p class="price">₹1,279</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSUP71j687SKyOM-mQWmH-YI_cCGTobPnV1bRnmA0Myje1sy2eCp1xxefDdiNG1C-AoCdaiNa2uXPPF71M76_jh0-tJnwQ15y_BvdJv0FbF&usqp=CAE" alt="Product 9">
+                <h3>Anjaneya Sarees Women Saree with Zari Border For Women (Teal, FS)</h3>
+                <p class="price">₹800</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 10 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTV9QAU3-S3vgubkD3tcF9Feh7HrqtmR9JiJyzcUeoMXgPBOrL1ovUupg3DJcE3W_B0efX5LjLKOgn8lu-U3ycg8iVaz89G7NYc9ACoxpozNgQPYJuJrEuz&usqp=CAE" alt="Product 10">
+                <h3>Tumr Face Makeup Combo Kit Of 13 Beauty Face Makeup Products</h3>
+                <p class="price">₹277</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 11 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZWl3B2pDV6Zad9L4db6Vt43QJNty8SPzGqzYOlqaBFdGYhvjJLYserQydT01I6SceVM1WFfPGFsfnogE5JTUVO7l_2kd5yQ8qBcVUdv-hmdBltIorBzRdGg&usqp=CAE" alt="Product 11">
+                <h3>Shf - Regular Polyester Door Mat ( 53 X 33 Cm ) Set Of 5 - Multi Others </h3>
+                <p class="price">₹600 </p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQjphp-fjgxKQQnpBnBzLO5H_8UI0s87JHKvHatmab7fc7W83dbpMj5fKIyCYY06_OjhKzuW1ZDCAZ-rX3qrNdLxHi4m6vxEesR84qdux1WDoRNsPQIHRjoWao&usqp=CAE" alt="Product 12">
+                <h3>Safari Pentagon 55 Cms Small Cabin Polypropylene Hard Sided 4 Wheels  </h3>
+                <p class="price">₹1,999 </p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 13 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRrFLQmecN-0fcfKCM7ktABdPoVpnYErSHfrpWPVoZAerwA6AAlY9R3HsEYanm-DRqLyk6UehooCEYcgWwQsl6At94TON9kIHvwJ0u4-iFQ5wPTaxrU_hUZPx4&usqp=CAE" alt="Product 13">
+                <h3>Lacto Calamine Under Eye Cream For Dark Circles, Fine Lines And Puff</h3>
+                <p class="price">₹299 </p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 14 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQluQu2J1SNEUcmdsK-MnIQEp_Pt61KG4Lt6iIHmNIg3O_FWXQzXoV93iUL3kmd0qNSAYRYYrO-xI0XxUtrMmVgg10zYxjl-DQyDWXa0B6pA827XEucPmAj&usqp=CAE" alt="Product 14">
+                <h3>Yu Fashions Crystal Pearl Bow Shaped High Fashion Pearl Drop Kore  </h3>
+                <p class="price">₹360</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 15 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ6KCx8mC28DMGFqOBMjG9PiwerYno1Ln3EZYZgq7YJxhQnvM_6D2qiNNUU6_6pXOebmzWz2tPciAFzDV1QhQKYBeQqoBVBi9eoQZRFbmVS_gvOe9f2bSAXbw&usqp=CAE" alt="Product 15">
+                <h3>ZKTeco Smart Door Lock with 5-Way Unlocking | Fingerprint | Pincode|</h3>
+                <p class="price">₹8,499</p>
+                <button>Add to Cart</button>
+            </div>
+ 
+
+        <!-- Product 16 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ3pO-NzlQ46ZuqMfCq4UXokHeogleqbhccZWp14YL5mexEqclPbqxU8aBhpndEosQE285_9IMY8xU_Ke7bb8IAHfr_6Fya-GB6JNOvtNO0riLG7EQBq_Wu&usqp=CAE " alt="Product 16">
+            <h3>Asus Vivo Book  </h3>
+            <p class="price">₹26,990 </p>
+            <button>Add to Cart</button>
+        </div>
+    
+    
+        <!-- Product 17-->
+        <div class="product-card">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSyNQ0Z1BaFklaiuGhRWw43dQwzjdiDHxNjARjCdcpnZJu__swytbKBv6bRxTPv3xKI8dBXHy9XnmgIUZ5GndW0nTCi7wK9taXXeJWbMRn158rHoTpzh9wx&usqp=CAE " alt="Product 17">
+            <h3>Titan Watch </h3>
+            <p class="price">₹11,990 </p>
+            <button>Add to Cart</button>
+        </div>
+
+    
+        <!-- Product 18 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSWbMyaDE3icZsuTdXqZj13rHnvivMG0R7xQlMhNSLBJUyOQgzlwO3kYz4yqgFDNqrDiONsKq_XyrM8M5bLIDbfJOdPkvQCgKfuHGY8DpNIW3vegkLPsrS3&usqp=CAE " alt="Product 18">
+            <h3>Philips Iron Box </h3>
+            <p class="price">₹7,995 </p>
+            <button>Add to Cart</button>
+        </div>
+
+    
+        <!-- Product 19 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJd8mzAg60qSc0u9IUBqJEe1XjMWr9k8NcaUDBMDlPxt9QenDUIHW1_56qN-4j-ROdm3aMPaSs8mMm6pBA_ZqsEJFnIYL_mrYYIR8wAQbpktbm3YWDDKhI&usqp=CAE " alt="Product 19">
+            <h3>Iphone13 phone case </h3>
+            <p class="price">₹399 </p>
+            <button>Add to Cart</button>
+        </div>
+
+    
+        <!-- Product 20 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSaS2RE2z5o9UoW02jeKIPNNVpolnE6ANfGIRVs3twrWF6JlrLiABsWHXx58olPlj25PRWCv2ox2CF5vwbkSPQFwcYEKC6zqmq2TcD_6AxLzgSaYvSRmixJyQ&usqp=CAE " alt="Product 20">
+            <h3>SmartBuy sandwich maker </h3>
+            <p class="price">₹1039 </p>
+            <button>Add to Cart</button>
+        </div>
+
+    
+        <!-- Product 21 -->
+        <div class="product-card">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSm-OMc1Avnho9pFX28lFSCpp3Lx_U5d0jIRe_WYRj-L0ZXpca6AIXc2M9tdA96RTwwXpdt_ghu50eO7P-0ezP5faeBr0_azhQCrPF1k-eMl3iGjQbZQLX4kA&usqp=CAE " alt="Product 21">
+            <h3> Yellow Chimes Pearl Beaded Hair Band For Women  </h3>
+            <p class="price">₹349 </p>
+            <button>Add to Cart</button>
+        </div>
+
+    <!-- Product 22 -->
+    <div class="product-card">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTKWAl6ZinYs1ZafztkB7dQw7Ivg0cBxcBTFzCz_PO9s8o1Lv9rpBtdDz8jCAiuw_m564SlS9u-sNLsJWlFheayYtvIViob_MEk7udJA9w&usqp=CAE " alt="Product 22">
+        <h3>Jewelgenics Silver-tone Heart Locket Pendant Chain Necklace Crystals</h3>
+        <p class="price">₹189 </p>
+        <button>Add to Cart</button>
+    </div>
+<!-- Product 23 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR0dYj80Fu8qgohAK20A6ym4gTeQbVMU9ZrBEbESPQkPFJ2seyYMOy8FCUfvZOLXd4OvHNNnsPOTurgMyei-aF1-MuI93UbUik-ZvnzIevG9hGkhOhJHeD1&usqp=CAE " alt="Product 24">
+    <h3>Prestige PRWO 2.8-2 2.80 Liters Rice Cooker </h3>
+    <p class="price">₹3,699 </p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 24 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQlVo3Nu5OT0whCz_9P1RVmJ0UJOfApBYAuBAgXBgX0lp_aEYH2fHBlQ9FV6aUq07ri2lQm9Zs3EM1h4HKjsmUcx_Dh49TZ8Kuxh9Z1yfOa2p1t2r0JuD-szA&usqp=CAE " alt="Product 24">
+    <h3>Pigeon By Stovekraft Limited 14762 Electric Kettle</h3>
+    <p class="price">₹1,389 </p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 25 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ7AZsC26lLAKxC4yabkMZn9tAzzETnltEaISIt4ALcG8V0PJtVMrqi1vQtqN_PWprmU8RXGCsP2CrItWjLVF9HusTQlUfPC1HIHaopmnpKMCZBeHZKDqki&usqp=CAE " alt="Product 24">
+    <h3></h3>ACTIVA Heat Max (2000 Watts) with 2 Heating Mode full ABS body Electrical </h3>
+    <p class="price">₹999</p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 26 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSZxZvLTOgFcLfz5WLjhEtx_K964ONfgxIpBHwPHuKPCuSrPVrHjCA0KfpLFWT8Y-4eC2tMvzEBqkcbacLT41ZC9Yt1Hlj00w&usqp=CAE " alt="Product 26">
+    <h3>HBC College bag for girls / school bags / girls bag 12 L Backpack  </h3>
+    <p class="price">₹399 </p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 27 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT5JH-75ejcAPUy8xF9s6-PP4XwQ7dMwSqAEEzfhef7kTphhxtYCdhPKJP-KmOuDZJfmyhRjKM0gHwxxcHxA0ZddXeciz7xXp4fAQK5JXHZ&usqp=CAE " alt="Product 27">
+    <h3>Twone A5 Spiral Notebook 4 Pack Kraft Cover Ruled Journals Notebooks </h3>
+    <p class="price">₹484 </p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 28 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSYVaBcn61ga5VGwLdUSLGXszb_bPJubuSA5wQXIOhwdoYCrSn-x0ADG9AvNvaUZl3RxPqfLXrr_uMeZK8M9Tn4pxrG-MbaWYb5WNEEl5oPDEQ2unZ1vaYm&usqp=CAE " alt="Product 28">
+    <h3>Milton Handy 650 Stainless Steel 690 Ml Bottle </h3>
+    <p class="price">₹285 </p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 29 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSfl7mg3J3bDLaIWTxP-XEhtOMwiboitqphHmi0wV5bL1oCCME1DEm7ILgwIoZ3Te71lZ2-i93OcZla1CH4O26EJ9KDMTF2iQFsl8Cc6oaeN7JYJO2VdKi5&usqp=CAE " alt="Product 29">
+    <h3>Tavish Wired -ear Earphone Headset Earbuds With Mic, Wired Gaming </h3>
+    <p class="price">₹269 </p>
+    <button>Add to Cart</button>
+</div>
+<!-- Product 30 -->
+<div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQJIFrnlkPMNckysUvhjgmD0RrX3bdWpWMWic-QGvxQc_QmMTiFFX_gWVOdZdutUhG7nRC-lfEFtte9GLewrtz_TBDBCM25cgzM-yp0qOSveuLcVDyJL19R&usqp=CAE " alt="Product 30">
+    <h3>Classmate Octane Neon Blue Gel Pen (Pack of 5) </h3>
+    <p class="price">₹50 </p>
+    <button>Add to Cart</button>
+</div>
+</div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Leadership Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Careers</h3>
+                <ul>
+                    <li><a href="#">Job Openings</a></li>
+                    <li><a href="#">Internships</a></li>
+                    <li><a href="#">Work Culture</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
